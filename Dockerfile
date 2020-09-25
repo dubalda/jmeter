@@ -1,6 +1,6 @@
 FROM openjdk:14.0.2-jdk-buster
 
-ARG JMETER_VERSION=5.2.1
+ARG JMETER_VERSION=5.3
 ENV SSL_DISABLED true
 
 ENV JMETER_HOME /apache/jmeter/
