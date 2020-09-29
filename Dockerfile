@@ -1,4 +1,4 @@
-FROM openjdk:14.0.2-jdk-buster
+FROM openjdk:8-jdk-buster
 
 ARG JMETER_VERSION=5.3
 ENV SSL_DISABLED true
@@ -34,6 +34,8 @@ RUN mkdir /apache && \
     PluginsManagerCMD.sh status && \
     jmeter --version && \
     ls -lh ${JMETER_HOME}lib/ext/
+    
+COPY ojdbc6-11.2.0.3.jar ${JMETER_HOME}lib/
 
 EXPOSE 1099 50000
 
